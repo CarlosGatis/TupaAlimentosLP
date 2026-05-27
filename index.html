@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Tupã Alimentos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="nav-container">
+      <div class="logo">
+        <img src="img/logo2.png" alt="Logo Tupã">
+      </div>
+      <nav class="nav-links">
+        <a href="#historia">Nossa História</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+       <div class="hero-inner">
+
+      <!-- ESQUERDA: TEXTO -->
+      <div class="hero-content">
+        <span class="hero-badge">Desde 1972</span>
+        <h1>Da nossa tradição<br>para a sua mesa</h1>
+        <p>Farinha, tapioca, fubá e farofa feitos com o cuidado de quem alimenta famílias há mais de 50 anos.</p>
+        <a href="#produtos" class="btn-hero">Conheça nossos produtos</a>
+      </div>
+
+      <!-- DIREITA: MINI CARROSSEL -->
+      <div class="hero-carousel">
+        <div class="hero-carousel-viewport">
+        <div class="hero-carousel-track" id="heroTrack">
+
+          <div class="hero-slide">
+            <img src="img/storie1.jpg" alt="Tupã Alimentos">
+          </div>
+
+          <div class="hero-slide">
+            <img src="img/storie2.jpg" alt="Tupã Alimentos">
+          </div>
+
+          <div class="hero-slide">
+            <img src="img/storie3.jpg" alt="Tupã Alimentos">
+          </div>
+
+        </div>
+        </div>
+
+        <!-- DOTS DO MINI CARROSSEL -->
+        <div class="hero-dots" id="heroDots">
+          <span class="hero-dot active"></span>
+          <span class="hero-dot"></span>
+          <span class="hero-dot"></span>
+        </div>
+
+        <!-- BARRA DE PROGRESSO -->
+        <div class="hero-progress">
+          <div class="hero-progress-bar" id="heroProgressBar"></div>
+        </div>
+      </div>
+
+    </div>
+</section>
+
+  <!-- HISTÓRIA DA MARCA -->
+  <section id="historia" class="historia">
+    <div class="historia-container">
+
+      <div class="historia-header">
+        <span class="section-label">Nossa História</span>
+        <h2>Uma tradição que começa em 1972</h2>
+      </div>
+
+      <div class="historia-grid">
+
+        <div class="historia-card">
+          <div class="card-icon">&#127807;</div>
+          <h3>Raízes no Campo</h3>
+          <p>
+            Nascida no coração do Brasil, a Tupã Alimentos surgiu da dedicação de uma família que entendia
+            o valor de uma boa farinha. Desde o início, o compromisso era um só: levar ingredientes
+            genuínos da roça direto para a mesa de cada brasileiro.
+          </p>
+        </div>
+
+        <div class="historia-card destaque">
+          <div class="card-icon">&#10084;&#65039;</div>
+          <h3>Mais de 50 Anos de Sabor</h3>
+          <p>
+            O que começou como um pequeno negócio familiar cresceu ao longo das décadas sem perder
+            sua essência. Hoje, os produtos Tupã estão presentes em mercados e comércios de todo o Brasil,
+            mantendo a qualidade artesanal que conquistou gerações.
+          </p>
+        </div>
+
+        <div class="historia-card">
+          <div class="card-icon">&#127968;</div>
+          <h3>Tradição que Alimenta</h3>
+          <p>
+            Cada pacote de farinha, tapioca, fubá ou farofa carrega o compromisso da Tupã com
+            ingredientes selecionados, processados com cuidado para garantir o sabor e a textura
+            que você já conhece e confia desde sempre.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- LINHA DO TEMPO -->
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">1972</span>
+            <p>Fundação da Tupã Alimentos com foco em farinha de mandioca artesanal.</p>
+          </div>
+        </div>
+        <div class="timeline-line"></div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">1990s</span>
+            <p>Expansão do portfólio com tapioca e fubá, alcançando novos mercados regionais.</p>
+          </div>
+        </div>
+        <div class="timeline-line"></div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2000s</span>
+            <p>Chegada da farofa ao catálogo e crescimento da distribuição para o varejo nacional.</p>
+          </div>
+        </div>
+        <div class="timeline-line"></div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">Hoje</span>
+            <p>Mais de 50 anos alimentando famílias com tradição, qualidade e sabor autêntico.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CARROSSEL DE PRODUTOS -->
+  <section id="produtos" class="produtos">
+    <div class="produtos-container">
+
+      <div class="produtos-header">
+        <span class="section-label">Linha Completa</span>
+        <h2>Nossos Produtos</h2>
+        <p>Gire o carrossel e conheça cada produto da família Tupã</p>
+      </div>
+
+      <div class="produtos-wrapper">
+
+        <!-- CARROSSEL -->
+        <div class="carousel-area">
+          <button class="carousel-btn prev" id="prevBtn">&#8592;</button>
+
+          <div class="carousel-track-wrapper">
+            <div class="carousel-track" id="carouselTrack">
+
+              <div class="carousel-slide active" data-produto="0">
+                <div class="slide-img-wrap">
+                  <img src="img/produtos/1.png" alt="Farinha de Mandioca Tupã">
+                </div>
+              </div>
+
+              <div class="carousel-slide" data-produto="1">
+                <div class="slide-img-wrap">
+                  <img src="img/produtos/2.png" alt="Fubá Tupã">
+                </div>
+              </div>
+
+              <div class="carousel-slide" data-produto="2">
+                <div class="slide-img-wrap">
+                  <img src="img/produtos/3.jpeg" alt="Tapioca Tupã">
+                </div>
+              </div>
+
+              <div class="carousel-slide" data-produto="3">
+                <div class="slide-img-wrap">
+                  <img src="img/produtos/4.jpeg" alt="Farofa Tupã">
+                </div>
+              </div>
+
+              <div class="carousel-slide" data-produto="4">
+                <div class="slide-img-wrap">
+                  <img src="img/produtos/5.jpeg" alt="Produto Tupã">
+                </div>
+              </div>
+
+              <div class="carousel-slide" data-produto="5">
+                <div class="slide-img-wrap">
+                  <img src="img/produtos/6.jpeg" alt="Produto Tupã">
+                </div>
+              </div>
+
+              <div class="carousel-slide" data-produto="6">
+                <div class="slide-img-wrap">
+                  <img src="img/produtos/7.jpeg" alt="Produto Tupã">
+                </div>
+              </div>
+
+              <div class="carousel-slide" data-produto="7">
+                <div class="slide-img-wrap">
+                  <img src="img/produtos/8.jpeg" alt="Produto Tupã">
+                </div>
+              </div>
+
+              <div class="carousel-slide" data-produto="8">
+                <div class="slide-img-wrap">
+                  <img src="img/produtos/9.jpeg" alt="Produto Tupã">
+                </div>
+              </div>
+
+              <div class="carousel-slide" data-produto="9">
+                <div class="slide-img-wrap">
+                  <img src="img/produtos/10.jpeg" alt="Produto Tupã">
+                </div>
+              </div>
+
+              <div class="carousel-slide" data-produto="10">
+                <div class="slide-img-wrap">
+                  <img src="img/produtos/11.jpeg" alt="Produto Tupã">
+                </div>
+              </div>
+
+              <div class="carousel-slide" data-produto="11">
+                <div class="slide-img-wrap">
+                  <img src="img/produtos/12.jpg" alt="Produto Tupã">
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <button class="carousel-btn next" id="nextBtn">&#8594;</button>
+
+          <!-- DOTS -->
+          <div class="carousel-dots" id="carouselDots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+            <span class="dot" data-index="3"></span>
+            <span class="dot" data-index="4"></span>
+            <span class="dot" data-index="5"></span>
+            <span class="dot" data-index="6"></span>
+            <span class="dot" data-index="7"></span>
+            <span class="dot" data-index="8"></span>
+            <span class="dot" data-index="9"></span>
+            <span class="dot" data-index="10"></span>
+            <span class="dot" data-index="11"></span>
+          </div>
+        </div>
+
+        <!-- PAINEL DE INFORMAÇÕES -->
+        <div class="produto-info-panel" id="produtoInfo">
+
+          <div class="produto-info active" data-info="0">
+            <span class="produto-tag">Produto Destaque</span>
+            <h3>Farinha de Mandioca Tupã</h3>
+            <p class="produto-desc">
+              A nossa farinha de mandioca é produzida a partir de raízes selecionadas, com processo
+              cuidadoso que preserva o sabor genuíno e a textura ideal. Perfeita para acompanhar
+              feijão, carnes e pratos típicos da culinária brasileira.
+            </p>
+            <ul class="produto-destaques">
+              <li>&#10003; Grão selecionado e de alta qualidade</li>
+              <li>&#10003; Textura fina e sabor suave</li>
+              <li>&#10003; Ideal para o dia a dia</li>
+              <li>&#10003; Disponível em embalagens de 500g e 1kg</li>
+            </ul>
+            <a href="https://wa.me/5548991334201" target="_blank" class="btn-pedir">Peça a sua via WhatsApp</a>
+          </div>
+
+          <div class="produto-info" data-info="1">
+            <span class="produto-tag">Clássico Tupã</span>
+            <h3>Fubá Tupã</h3>
+            <p class="produto-desc">
+              Feito do milho mais bonito e bem seco, o fubá Tupã tem aquela cor amarela vibrante
+              e o aroma que já remete ao fogão da vovó. Ideal para angu, cuscuz, bolo de milho
+              e muito mais.
+            </p>
+            <ul class="produto-destaques">
+              <li>&#10003; Milho selecionado e moído fino</li>
+              <li>&#10003; Cor vibrante e aroma natural</li>
+              <li>&#10003; Sem adição de conservantes</li>
+              <li>&#10003; Disponível em embalagens de 500g e 1kg</li>
+            </ul>
+            <a href="https://wa.me/5548991334201" target="_blank" class="btn-pedir">Peça a sua via WhatsApp</a>
+          </div>
+
+          <div class="produto-info" data-info="2">
+            <span class="produto-tag">Praticidade & Sabor</span>
+            <h3>Tapioca Tupã</h3>
+            <p class="produto-desc">
+              Nossa tapioca é finamente peneirada para garantir aquela textura irresistível na
+              frigideira. Versátil, saudável e prática, ela combina com doce ou salgado e fica
+              pronta em minutos para qualquer hora do dia.
+            </p>
+            <ul class="produto-destaques">
+              <li>&#10003; Textura uniforme e consistência perfeita</li>
+              <li>&#10003; Sem glúten naturalmente</li>
+              <li>&#10003; Resultado crocante por fora e macio por dentro</li>
+              <li>&#10003; Disponível em embalagens de 500g e 1kg</li>
+            </ul>
+            <a href="https://wa.me/5548991334201" target="_blank" class="btn-pedir">Peça a sua via WhatsApp</a>
+          </div>
+
+          <div class="produto-info" data-info="3">
+            <span class="produto-tag">Tradição em cada garfo</span>
+            <h3>Farofa Tupã</h3>
+            <p class="produto-desc">
+              A farofa Tupã é temperada com cuidado para ser o acompanhamento ideal de qualquer
+              refeição. Crocante, saborosa e prática, ela salva qualquer almoço — especialmente
+              quando a carne está assando no churrasco.
+            </p>
+            <ul class="produto-destaques">
+              <li>&#10003; Temperada artesanalmente</li>
+              <li>&#10003; Crocante e saborosa</li>
+              <li>&#10003; Acompanhamento versátil</li>
+              <li>&#10003; Disponível em embalagens de 500g e 1kg</li>
+            </ul>
+            <a href="https://wa.me/5548991334201" target="_blank" class="btn-pedir">Peça a sua via WhatsApp</a>
+          </div>
+
+          <div class="produto-info" data-info="4">
+            <span class="produto-tag">Produto Tupã</span>
+            <h3>Farinha Grossa Tupã</h3>
+            <p class="produto-desc">
+              Com granulação mais encorpada, a farinha grossa Tupã é ideal para receitas que
+              pedem textura e crocância. Perfeita para empanar, temperar caldos e acompanhar
+              pratos regionais com mais personalidade.
+            </p>
+            <ul class="produto-destaques">
+              <li>&#10003; Granulação grossa e uniforme</li>
+              <li>&#10003; Ideal para empanar e temperar</li>
+              <li>&#10003; Sabor marcante e autêntico</li>
+              <li>&#10003; Disponível em embalagens de 500g e 1kg</li>
+            </ul>
+            <a href="https://wa.me/5548991334201" target="_blank" class="btn-pedir">Peça a sua via WhatsApp</a>
+          </div>
+
+          <div class="produto-info" data-info="5">
+            <span class="produto-tag">Produto Tupã</span>
+            <h3>Polvilho Doce Tupã</h3>
+            <p class="produto-desc">
+              O polvilho doce Tupã é extraído da mandioca fresca, com pureza e leveza garantidas.
+              Essencial para biscoitos de polvilho, pão de queijo e diversas receitas da culinária
+              mineira e brasileira.
+            </p>
+            <ul class="produto-destaques">
+              <li>&#10003; Alta pureza e cor branca natural</li>
+              <li>&#10003; Ideal para biscoito e pão de queijo</li>
+              <li>&#10003; Textura leve e delicada</li>
+              <li>&#10003; Disponível em embalagens de 500g e 1kg</li>
+            </ul>
+            <a href="https://wa.me/5548991334201" target="_blank" class="btn-pedir">Peça a sua via WhatsApp</a>
+          </div>
+
+          <div class="produto-info" data-info="6">
+            <span class="produto-tag">Produto Tupã</span>
+            <h3>Polvilho Azedo Tupã</h3>
+            <p class="produto-desc">
+              Com fermentação natural controlada, o polvilho azedo Tupã garante o crescimento
+              perfeito nos biscoitos de polvilho e pão de queijo. Sabor levemente ácido que faz
+              toda a diferença no resultado final.
+            </p>
+            <ul class="produto-destaques">
+              <li>&#10003; Fermentação natural controlada</li>
+              <li>&#10003; Crescimento garantido no forno</li>
+              <li>&#10003; Sabor levemente ácido e característico</li>
+              <li>&#10003; Disponível em embalagens de 500g e 1kg</li>
+            </ul>
+            <a href="https://wa.me/5548991334201" target="_blank" class="btn-pedir">Peça a sua via WhatsApp</a>
+          </div>
+
+          <div class="produto-info" data-info="7">
+            <span class="produto-tag">Produto Tupã</span>
+            <h3>Fubá Mimoso Tupã</h3>
+            <p class="produto-desc">
+              O fubá mimoso é moído extra-fino, com textura aveludada e cor dourada vibrante.
+              Perfeito para bolos fofos, mingau cremoso e canjica. Cada receita fica com
+              aquele sabor suave e delicado de milho.
+            </p>
+            <ul class="produto-destaques">
+              <li>&#10003; Moagem extra-fina e aveludada</li>
+              <li>&#10003; Ideal para bolos e mingau</li>
+              <li>&#10003; Cor dourada e aroma natural</li>
+              <li>&#10003; Disponível em embalagens de 500g e 1kg</li>
+            </ul>
+            <a href="https://wa.me/5548991334201" target="_blank" class="btn-pedir">Peça a sua via WhatsApp</a>
+          </div>
+
+          <div class="produto-info" data-info="8">
+            <span class="produto-tag">Produto Tupã</span>
+            <h3>Tapioca Granulada Tupã</h3>
+            <p class="produto-desc">
+              Em grânulos maiores, esta tapioca é ideal para quem prefere uma textura
+              mais encorpada. Ótima para sagu, sobremesas cremosas e receitas que pedem
+              o toque especial da mandioca em grão.
+            </p>
+            <ul class="produto-destaques">
+              <li>&#10003; Grânulos uniformes e firmes</li>
+              <li>&#10003; Perfeita para sagu e sobremesas</li>
+              <li>&#10003; Sem glúten naturalmente</li>
+              <li>&#10003; Disponível em embalagens de 500g e 1kg</li>
+            </ul>
+            <a href="https://wa.me/5548991334201" target="_blank" class="btn-pedir">Peça a sua via WhatsApp</a>
+          </div>
+
+          <div class="produto-info" data-info="9">
+            <span class="produto-tag">Produto Tupã</span>
+            <h3>Farofa de Alho Tupã</h3>
+            <p class="produto-desc">
+              A versão mais especial da nossa farofa, com alho tostado artesanalmente para
+              um aroma irresistível. Combina com churrasco, frango assado, feijão e
+              qualquer prato que mereça aquele toque especial.
+            </p>
+            <ul class="produto-destaques">
+              <li>&#10003; Alho tostado artesanalmente</li>
+              <li>&#10003; Aroma e sabor marcantes</li>
+              <li>&#10003; Acompanhamento coringa</li>
+              <li>&#10003; Disponível em embalagens de 500g e 1kg</li>
+            </ul>
+            <a href="https://wa.me/5548991334201" target="_blank" class="btn-pedir">Peça a sua via WhatsApp</a>
+          </div>
+
+          <div class="produto-info" data-info="10">
+            <span class="produto-tag">Produto Tupã</span>
+            <h3>Farinha de Mandioca Torrada Tupã</h3>
+            <p class="produto-desc">
+              Tostada no ponto certo, esta farinha tem sabor e aroma mais intensos, perfeita
+              para quem aprecia o tradicional pirão torrado. Combina com peixes, caldos
+              e acompanhamentos do Norte e Nordeste do Brasil.
+            </p>
+            <ul class="produto-destaques">
+              <li>&#10003; Tostagem artesanal no ponto ideal</li>
+              <li>&#10003; Sabor e aroma mais intensos</li>
+              <li>&#10003; Tradição do Norte e Nordeste</li>
+              <li>&#10003; Disponível em embalagens de 500g e 1kg</li>
+            </ul>
+            <a href="https://wa.me/5548991334201" target="_blank" class="btn-pedir">Peça a sua via WhatsApp</a>
+          </div>
+
+          <div class="produto-info" data-info="11">
+            <span class="produto-tag">Produto Tupã</span>
+            <h3>Cuscuz de Milho Tupã</h3>
+            <p class="produto-desc">
+              Feito com fubá selecionado e trigo fino, o cuscuz Tupã garante aquela
+              consistência leve e soltinha do café da manhã nordestino. Prático, rápido
+              e cheio do sabor que a família ama.
+            </p>
+            <ul class="produto-destaques">
+              <li>&#10003; Grão selecionado e uniforme</li>
+              <li>&#10003; Preparo rápido e prático</li>
+              <li>&#10003; Consistência soltinha e leve</li>
+              <li>&#10003; Disponível em embalagens de 500g e 1kg</li>
+            </ul>
+            <a href="https://wa.me/5548991334201" target="_blank" class="btn-pedir">Peça a sua via WhatsApp</a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- RODAPÉ / CONTATO -->
+  <footer id="contato" class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="img/logo.png" alt="Tupã Alimentos">
+        <p>Da nossa tradição para a mesa da sua família.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Links</h4>
+        <a href="#historia">Nossa História</a>
+        <a href="#produtos">Produtos</a>
+      </div>
+      <div class="footer-contato">
+        <h4>Fale conosco</h4>
+        <a href="https://wa.me/5548991334201" target="_blank">WhatsApp: (48) 99133-4201</a>
+        <a href="https://www.instagram.com/tupa_alimentos" target="_blank">@tupa_alimentos</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Tupã Alimentos. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
