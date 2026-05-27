@@ -13,63 +13,6 @@ window.addEventListener('scroll', () => {
   lastScroll = current;
 });
 
-// ---- MINI CARROSSEL DO HERO (auto) ----
-(function () {
-  const INTERVAL = 3800;
-  const heroTrack = document.getElementById('heroTrack');
-  const heroDotsEl = document.getElementById('heroDots');
-  const progressBar = document.getElementById('heroProgressBar');
-
-  if (!heroTrack) return;
-
-  const heroSlides = heroTrack.querySelectorAll('.hero-slide');
-  const heroDotsList = heroDotsEl.querySelectorAll('.hero-dot');
-  let heroIndex = 0;
-  let timer = null;
-  let progressAnim = null;
-
-  function heroGoTo(index) {
-    heroSlides[heroIndex].classList.remove('active');
-    heroDotsList[heroIndex].classList.remove('active');
-
-    heroIndex = (index + heroSlides.length) % heroSlides.length;
-
-    heroSlides[heroIndex].classList.add('active');
-    heroDotsList[heroIndex].classList.add('active');
-    heroTrack.style.transform = `translateX(-${heroIndex * 100}%)`;
-
-    startProgress();
-  }
-
-  function startProgress() {
-    progressBar.style.transition = 'none';
-    progressBar.style.width = '0%';
-
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        progressBar.style.transition = `width ${INTERVAL}ms linear`;
-        progressBar.style.width = '100%';
-      });
-    });
-  }
-
-  function startAuto() {
-    if (timer) clearInterval(timer);
-    timer = setInterval(() => heroGoTo(heroIndex + 1), INTERVAL);
-  }
-
-  heroDotsList.forEach((dot, i) => {
-    dot.addEventListener('click', () => {
-      heroGoTo(i);
-      startAuto();
-    });
-  });
-
-  heroSlides[0].classList.add('active');
-  startProgress();
-  startAuto();
-})();
-
 // Carousel
 const track = document.getElementById('carouselTrack');
 const slides = document.querySelectorAll('.carousel-slide');

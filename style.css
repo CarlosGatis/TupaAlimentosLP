@@ -30,13 +30,13 @@ body {
 /* ===================== HEADER ===================== */
 .header {
   width: 100%;
-  background: var(--red);
+  background: #fff;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
   height: 90px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
   transition: transform 0.35s ease;
 }
 
@@ -60,7 +60,7 @@ body {
 }
 
 .logo img {
-  height: 65px;
+  height: 82px;
   object-fit: contain;
 }
 
@@ -71,15 +71,15 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: rgba(255,255,255,0.88);
-  font-weight: 500;
+  color: #333;
+  font-weight: 600;
   font-size: 0.95rem;
   letter-spacing: 0.03em;
   transition: color 0.2s;
 }
 
 .nav-links a:hover {
-  color: var(--white);
+  color: var(--red);
 }
 
 /* ===================== HERO ===================== */
@@ -159,108 +159,108 @@ body {
   box-shadow: 0 8px 28px rgba(0,0,0,0.2);
 }
 
-/* MINI CARROSSEL DO HERO */
-.hero-carousel {
-  position: relative;
+/* GRID INSTAGRAM NO HERO */
+.hero-instagram {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
 }
 
-.hero-carousel-viewport {
-  overflow: hidden;
-  border-radius: 20px;
-  width: 100%;
-}
-
-.hero-carousel-track {
-  display: flex;
-  transition: transform 0.55s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
-.hero-slide {
-  min-width: 100%;
-  position: relative;
-  border-radius: 20px;
-  overflow: hidden;
-  aspect-ratio: 3/2;
-  background: rgba(255,255,255,0.08);
+.ig-header {
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 8px;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 0 2px;
 }
 
-.hero-slide img {
+.ig-header span {
+  flex: 1;
+}
+
+.ig-follow-btn {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: 50px;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.3);
+  transition: background 0.2s;
+}
+
+.ig-follow-btn:hover {
+  background: rgba(255,255,255,0.28);
+}
+
+.ig-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.ig-item {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  display: block;
+}
+
+.ig-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  transition: transform 0.4s ease;
 }
 
-.hero-slide.active img {
-  transform: scale(1.05);
+.ig-item:hover img {
+  transform: scale(1.08);
 }
 
-.hero-slide-caption {
+.ig-overlay {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 28px 24px 20px;
-  background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 100%);
+  inset: 0;
+  background: rgba(0,0,0,0);
   display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.hero-slide-caption strong {
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 700;
-}
-
-.hero-slide-caption span {
-  color: rgba(255,255,255,0.75);
-  font-size: 0.82rem;
-}
-
-/* DOTS HERO */
-.hero-dots {
-  display: flex;
-  gap: 8px;
+  align-items: center;
   justify-content: center;
+  transition: background 0.3s;
 }
 
-.hero-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.35);
-  cursor: pointer;
-  transition: background 0.25s, transform 0.25s, width 0.3s;
+.ig-overlay svg {
+  opacity: 0;
+  transform: scale(0.7);
+  transition: opacity 0.3s, transform 0.3s;
 }
 
-.hero-dot.active {
-  background: #fff;
-  width: 24px;
-  border-radius: 4px;
+.ig-item:hover .ig-overlay {
+  background: rgba(0,0,0,0.45);
 }
 
-/* BARRA DE PROGRESSO */
-.hero-progress {
-  height: 3px;
-  background: rgba(255,255,255,0.2);
-  border-radius: 2px;
-  overflow: hidden;
-  margin: 0 4px;
+.ig-item:hover .ig-overlay svg {
+  opacity: 1;
+  transform: scale(1);
 }
 
-.hero-progress-bar {
-  height: 100%;
-  background: rgba(255,255,255,0.85);
-  border-radius: 2px;
-  width: 0%;
-  transition: width linear;
+.ig-ver-mais {
+  display: block;
+  text-align: center;
+  color: rgba(255,255,255,0.8);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 4px 0;
+  transition: color 0.2s;
+}
+
+.ig-ver-mais:hover {
+  color: #fff;
 }
 
 /* ===================== LABELS ===================== */
@@ -670,6 +670,7 @@ body {
   align-items: center;
   gap: 60px;
   width: max-content;
+  will-change: transform;
   animation: scroll-logos 22s linear infinite;
 }
 
@@ -699,6 +700,7 @@ body {
   max-width: 160px;
   width: auto;
   object-fit: contain;
+  display: block;
 }
 
 @keyframes scroll-logos {
@@ -926,6 +928,45 @@ body {
   .footer-container {
     grid-template-columns: 1fr;
     gap: 24px;
+    text-align: center;
+  }
+
+  .footer-logo img {
+    margin: 0 auto 14px;
+  }
+
+  .footer-links,
+  .footer-contato {
+    align-items: center;
+  }
+
+  .parceiros {
+    padding: 50px 0;
+  }
+
+  .logos-slider {
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  }
+
+  .logos-track {
+    gap: 32px;
+    animation-duration: 16s;
+  }
+
+  .logo-item {
+    height: 46px;
+    padding: 0 6px;
+  }
+
+  .logo-item img {
+    max-width: 100px;
+  }
+
+  .footer-dev {
+    position: static;
+    display: block;
+    margin-top: 4px;
   }
 }
 
